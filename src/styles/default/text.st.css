@@ -1,0 +1,174 @@
+/**
+ * = TEXT - text.st.css
+ * 
+ * ========================================================================= */
+
+/* = Project and vars */
+:import {
+  -st-from: "./project.st.css";
+  -st-default: Default;
+  -st-named:
+    --spacing-unit,
+    --text-vol-1-max, --text-vol-1-scale, --text-vol-1-line-height,
+    --text-vol-2-max, --text-vol-2-scale, --text-vol-2-line-height,
+    --text-vol-3-max, --text-vol-3-scale, --text-vol-3-line-height,
+    --text-vol-4-max, --text-vol-4-scale, --text-vol-4-line-height,
+    --text-vol-5-max, --text-vol-5-scale, --text-vol-5-line-height,
+    --text-vol-6-max, --text-vol-6-scale, --text-vol-6-line-height,
+    --text-vol-7-max, --text-vol-7-scale, --text-vol-7-line-height,
+    --text-vol-8-max, --text-vol-8-scale, --text-vol-8-line-height,
+    --text-vol-9-max, --text-vol-9-scale, --text-vol-9-line-height,
+    --text-vol-10-max, --text-vol-10-scale, --text-vol-10-line-height,
+    --text-vol-11-max, --text-vol-11-scale, --text-vol-11-line-height;
+}
+
+/* = Root Component. */
+:import {
+  -st-from: "@actionishope/shelley/components/Text/text.st.css";
+  -st-default: Text;
+}
+
+/* = Mixins & Utils */
+:import {
+  -st-from: './mixins/text.st.css';
+  -st-named:
+    textVol;
+}
+
+@st-scope Default {
+  Text {}
+
+  /* = Volume 1 */
+
+  Text:vol(1) {
+    -st-mixin:
+      textVol(scale var(--text-vol-1-scale),
+        max var(--text-vol-1-max),
+        lineHeight var(--text-vol-1-line-height));
+  }
+
+  /* = Volume 2 */
+  Text:vol(2) {
+    -st-mixin:
+      textVol(scale var(--text-vol-2-scale),
+        max var(--text-vol-2-max),
+        lineHeight var(--text-vol-2-line-height));
+  }
+
+  /* = Volume 3 */
+  Text:vol(3) {
+    -st-mixin:
+      textVol(scale var(--text-vol-3-scale),
+        max var(--text-vol-3-max),
+        lineHeight var(--text-vol-3-line-height));
+  }
+
+
+  /* = Volume 4 */
+  Text:vol(4) {
+    -st-mixin:
+      textVol(scale var(--text-vol-4-scale),
+        max var(--text-vol-4-max),
+        lineHeight var(--text-vol-4-line-height));
+  }
+
+  /* = Volume 5 */
+  Text:vol(5) {
+    -st-mixin:
+      textVol(scale var(--text-vol-5-scale),
+        max var(--text-vol-5-max),
+        lineHeight var(--text-vol-5-line-height));
+  }
+
+  /* = Volume 6 */
+  Text:vol(6) {
+    -st-mixin:
+      textVol(scale var(--text-vol-6-scale),
+        max var(--text-vol-6-max),
+        lineHeight var(--text-vol-6-line-height));
+  }
+
+  /* = Volume 7 */
+  Text:vol(7) {
+    -st-mixin:
+      textVol(scale var(--text-vol-7-scale),
+        max var(--text-vol-7-max),
+        lineHeight var(--text-vol-7-line-height));
+  }
+
+  /* = Volume 8 */
+  Text:vol(8) {
+    -st-mixin:
+      textVol(scale var(--text-vol-8-scale),
+        max var(--text-vol-8-max),
+        lineHeight var(--text-vol-8-line-height));
+  }
+
+  /* = Volume 9 */
+  Text:vol(9) {
+    -st-mixin:
+      textVol(scale var(--text-vol-9-scale),
+        max var(--text-vol-9-max),
+        lineHeight var(--text-vol-9-line-height));
+  }
+
+  /* = Volume 10 */
+  Text:vol(10) {
+    -st-mixin:
+      textVol(scale var(--text-vol-10-scale),
+        max var(--text-vol-10-max),
+        lineHeight var(--text-vol-10-line-height));
+    font-weight: 300;
+  }
+
+  /* = Volume 11 */
+  Text:vol(11) {
+    -st-mixin:
+      textVol(scale var(--text-vol-11-scale),
+        max var(--text-vol-11-max),
+        lineHeight var(--text-vol-11-line-height));
+    font-weight: 300;
+  }
+
+  /* = Weights */
+  /** 
+   * :not(any) is a specificity hack ensuring these are applied even if a 
+   * theme has set defaults on them via the volumes. 
+   */
+  Text:weight(1):not(any) {
+    font-weight: 100;
+  }
+
+  Text:weight(2):not(any) {
+    font-weight: 200;
+  }
+
+  Text:weight(3):not(any) {
+    font-weight: 300;
+  }
+
+  Text:weight(4):not(any) {
+    font-weight: 400;
+  }
+
+  Text:weight(5):not(any) {
+    font-weight: 500;
+  }
+
+  Text:weight(6):not(any) {
+    font-weight: 600;
+  }
+
+  Text:weight(7):not(any) {
+    font-weight: 700;
+  }
+
+  Text:weight(8):not(any) {
+    font-weight: 800;
+  }
+
+  Text:weight(9):not(any) {
+    font-weight: 900;
+  }
+
+}
